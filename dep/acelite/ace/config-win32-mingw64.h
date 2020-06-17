@@ -1,7 +1,7 @@
 // -*- C++ -*-
 //
 // The following configuration file is designed to work for win32 and win64
-// platforms using gcc/g++ with mingw64 (https://mingw-w64.org/doku.php).
+// platforms using gcc/g++ with mingw64 (http://http://mingw-w64.sourceforge.net/).
 //
 
 #ifndef ACE_CONFIG_WIN32_MINGW64_H
@@ -122,6 +122,8 @@
 #define ACE_LACKS_PDHMSG_H
 #define ACE_LACKS_STRTOK_R
 #define ACE_LACKS_LOCALTIME_R
+#define ACE_LACKS_GMTIME_R
+#define ACE_LACKS_ASCTIME_R
 #define ACE_HAS_NONCONST_WCSDUP
 #define ACE_ISCTYPE_EQUIVALENT ::_isctype
 
