@@ -18,14 +18,14 @@
 #include "Auth/SARC4.h"
 #include <openssl/sha.h>
 
-SARC4::SARC4(uint32 len)
+SARC4::SARC4(uint32 len) : m_ctx(EVP_CIPHER_CTX_new())
 {
     EVP_CIPHER_CTX_init(m_ctx);
     EVP_EncryptInit_ex(m_ctx, EVP_rc4(), nullptr, nullptr, nullptr);
     EVP_CIPHER_CTX_set_key_length(m_ctx, len);
 }
 
-SARC4::SARC4(uint8* seed, uint32 len)
+SARC4::SARC4(uint8* seed, uint32 len) : m_ctx(EVP_CIPHER_CTX_new())
 {
     EVP_CIPHER_CTX_init(m_ctx);
     EVP_EncryptInit_ex(m_ctx, EVP_rc4(), nullptr, nullptr, nullptr);
